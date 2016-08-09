@@ -7,9 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
+
   a = Article.new(
-    title: "#{Faker::Name.name}"
+    title: "#{Faker::Name.name}",
     content: "#{Faker::Lorem.paragraph(6)}"
   )
   a.save
 end
+
+# 10.times do
+#   post = Post.new(
+#     name: Faker::Commerce.product_name,
+#     url: Faker::Internet.url,
+#     votes: (0..1000).to_a.sample
+#   )
+#   post.save
+# end
