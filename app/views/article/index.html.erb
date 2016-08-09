@@ -1,2 +1,9 @@
 <h1>Article#index</h1>
 <p>Find me in app/views/article/index.html.erb</p>
+
+<% @article.each do |art| %>
+  <h3><%= to_markdown(art.title)%></h3>
+  <p><%= link_to 'Show full article', article_path(art.id) %></p>
+
+
+<% end %>
