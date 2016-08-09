@@ -1,9 +1,13 @@
-<h1>Article#index</h1>
-<p>Find me in app/views/article/index.html.erb</p>
-
-<% @article.each do |art| %>
-  <h3><%= to_markdown(art.title)%></h3>
-  <p><%= link_to 'Show full article', article_path(art.id) %></p>
-
-
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="text-center">
+      <h1>Article form Faker Experiance</h1>
+      <% @article.each do |art| %>
+        <div class="card">
+          <h3><%= to_markdown(art.title)%></h3>
+          <p><%= link_to 'Show full article', article_path(art.id), class: 'btn btn-primary'%></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
